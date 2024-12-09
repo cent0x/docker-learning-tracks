@@ -70,13 +70,17 @@ docekr iamges -a
 ```
 
 8. **Run the Docker container**:
-- Delete or Modify this
+- Delete the `COPY` command line or append `#`, save the changes
 
 ```Dockerfile
 # Copy the HTML file to the nginx html directory
-  COPY static /usr/share/nginx/html/
+#  COPY static /usr/share/nginx/html/
 ```
-- Run the container using the image you just built.
+- Build the image and run the container again, but this time with `-v`
+
+```sh
+docker build -t nginx-img .
+```
 
 ```sh
 docker run -d -p 80:80 -v "$(pwd)/static:/usr/share/nginx/html" nginx-img

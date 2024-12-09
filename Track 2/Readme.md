@@ -28,17 +28,16 @@ mkdir src
 5. **Add Code to `main.py`**:
    - Open `main.py` in VSCode and add the following code:
 ```python
-from fastapi import FastAPI
+from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI()
 
 @app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
 
-def read_root():
+# To run the server, use the command: uvicorn filename:app --reload
 
-    return {"message": "Hello, World!"}
-
-# To run the server, use the command: uvicorn filename:app --reload
 ```
 
 6. **Create `requirements.txt`**:
