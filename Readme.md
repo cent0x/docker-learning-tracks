@@ -20,10 +20,10 @@ This repository contains a collection of tracks aimed at teaching various aspect
 
 Before you begin, ensure you have the following installed on your system:
 
-- **[[WSL.md]] (Windows Subsystem for Linux)**: Follow the installation procedure. 
-- **Docker Desktop**: Follow the installation procedure.
-- **Git**: Follow the installation procedure.
-- **Visual Studio Code (VSCode)**: Follow the installation procedure.
+- **[[WSL]] (Windows Subsystem for Linux)**: Follow the installation procedure. 
+- **[[Docker Desktop]]**: Follow the installation procedure. 
+- **[[Visual Studio Code]](VSCode)**: Follow the installation procedure.
+-  **Git**: Follow the installation procedure.
 
 ### Steps to Get Started
 
