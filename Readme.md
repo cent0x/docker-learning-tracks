@@ -31,7 +31,7 @@ Before you begin, ensure you have the following installed on your system:
 1. **Clone the Repository**:
     
     ```sh
-    git clone https://github.com/your-username/docker-learning-tracks.git
+    git https://github.com/cent0x/docker-learning-tracks.git
     cd docker-learning-tracks
     ```
     
