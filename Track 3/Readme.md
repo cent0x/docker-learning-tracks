@@ -6,6 +6,7 @@
 2. **Create a New Project Directory**:
  - Navigate to the location where you want to create your project directory.
    - Create a new directory for your project:
+   
 ```sh
 mkdir fastapi-docker
 cd fastapi-docker
@@ -25,6 +26,7 @@ mkdir src
 
 5. **Add Code to `main.py`**:
    - Open `main.py` in VSCode and add the following code:
+   
 ```python
 import redis
 from fastapi import FastAPI
@@ -49,7 +51,7 @@ def read_item(item_id: int, q: str = None):
 
 6. **Create `requirements.txt`**:
    - Go back to the root of your project directory and create a `requirements.txt` file:
-```sh
+```powershell
 cd ..
 touch requirements.txt
 ```
