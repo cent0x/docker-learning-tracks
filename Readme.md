@@ -21,8 +21,8 @@ To get started with the projects in this repository, follow these steps:
 1. **Clone the Repository**:
 
 ```sh
-git clone https://github.com/your-username/docker-learning-projects.git
-cd docker-learning-projects
+git clone https://github.com/cent0x/Docker.git
+cd Docker
 ```
 
 2. **Explore the Projects**:
