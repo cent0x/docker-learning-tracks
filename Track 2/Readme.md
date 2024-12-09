@@ -110,13 +110,13 @@ Create `docker-compose.yml` file in parent directory
 ```yml
 services:
   app:
-	build: .
-	container_name: python-cont
-	command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
-	ports:
-	 - 8000:8000
-	volumes:
-	 - .:/code
+    build: .
+    container_name: python-cont
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
 ```
 
 Run `docker compose`
