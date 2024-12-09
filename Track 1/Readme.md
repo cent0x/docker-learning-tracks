@@ -1,12 +1,20 @@
-Sure, I can help you set up a simple static web server for RZ Auto Shop using Docker. Here's a step-by-step guide:
+# Track 1: Setting Up a Simple Web Server
+___
 
+
+Description: Create a Docker container that runs a basic web server using Nginx.
+
+Technologies: Docker, Nginx
+
+Learning Outcomes: Understand how to create and run containers, expose ports, and serve static content.
+## Procedure
+___
 1. **Create the HTML file**:
    - First, create a directory for your project and navigate into it.
    - Create a subfolder webpage 
 
 2. Get static webpages from the Internet
     - Visit https://html5up.net/ to choose for site templates
-
 
 3. **Create a Dockerfile**:
    - In the same directory, create a `Dockerfile` to set up the web server.

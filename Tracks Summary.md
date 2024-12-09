@@ -1,28 +1,3 @@
-
-# Beginner Level
-
-## Setting Up a Simple Web Server
-
-  
-
-Description: Create a Docker container that runs a basic web server using Nginx.
-
-Technologies: Docker, Nginx
-
-Steps:
-
-Install Docker.
-
-Create a project directory and an index.html file.
-
-Write a Dockerfile to define the environment.
-
-Build the Docker image.
-
-Run the container and access the web server from your browser.
-
-Learning Outcomes: Understand how to create and run containers, expose ports, and serve static content.
-
   
 
 ## Dockerizing a Python Script
