@@ -62,11 +62,11 @@ docker ps -aq
 ```
 - Delete all the Docker images
 ```
-docker rm -f (docker ps -aq)
+docker rmi -f (docker images -q)
 ```
 - To verify if all images are deleted
 ```
-docekr iamges -a
+docker images -a
 ```
 
 8. **Run the Docker container**:
