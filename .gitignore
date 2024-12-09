@@ -1,5 +1,5 @@
 # Ignore all .log files
 *.log
 
-# Ignore all .obsidian files
-*.obsidian
+# Ignore all files inside obsidian folder
+/obsidian
