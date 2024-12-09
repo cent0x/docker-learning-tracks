@@ -23,7 +23,7 @@ Before you begin, ensure you have the following installed on your system:
 - **[[WSL]](Installations/WSL.md)**
 - **[[Docker Desktop]](Installations/DockerDesktop.md)**
 - **[[VSCode]](Installations/VScode.md)**
-- **[[Git]](Installations/Git.md)**
+- **[[GIthub]](Installations/Git.md)**
 - **[[Obsidian]](Installations/Obsidian.md)**
 
 ### Steps to Get Started
