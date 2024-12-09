@@ -2,4 +2,4 @@
 *.log
 
 # Ignore all files inside obsidian folder
-/obsidian
+/.obsidian
