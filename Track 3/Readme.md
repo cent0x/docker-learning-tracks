@@ -1,5 +1,3 @@
-Sure! Here's how you can set up your project directory in VSCode with `main.py` inside a `src` directory:
-
 ### Step-by-Step Guide
 
 1. **Open Terminal**:
@@ -28,13 +26,25 @@ mkdir src
 5. **Add Code to `main.py`**:
    - Open `main.py` in VSCode and add the following code:
 ```python
+import redis
 from fastapi import FastAPI
 
 app = FastAPI()
 
+# Connect to Redis
+redis_client = redis.Redis(host='redis', port=6379, db=0)
+
 @app.get("/")
-	def read_root():
-		return {"message": "Hello, World!"}
+def read_root():
+    redis_client.incr('hits')
+    hits = redis_client.get('hits').decode('utf-8')
+    return {"message": "Hello World", "hits": hits}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str = None):
+    redis_client.set(f'item:{item_id}', q)
+    stored_value = redis_client.get(f'item:{item_id}').decode('utf-8')
+    return {"item_id": item_id, "stored_value": stored_value}
 ```
 
 6. **Create `requirements.txt`**:
@@ -45,8 +55,9 @@ touch requirements.txt
 ```
    - Add the following dependencies to `requirements.txt`:
 ```
- fastapi
+fastapi
 uvicorn
+redis
 ```
 
 7. **Create the `Dockerfile`**:
@@ -55,50 +66,21 @@ Dockerfile
 
    - Add the following content to the `Dockerfile`:
 ```Dockerfile
-# Use the official Python image from the Docker Hub
+#Get the latest image Pythton:3.14-slim
 FROM python:3.13-slim
 
-# Set the working directory in the container
 WORKDIR /code
 
-# Copy the requirements file into the container
+#Copy requirements file
 COPY ./requirements.txt ./
 
-# Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code into the /src directory
 COPY ./src ./src
 
-# Command to run the application with auto-reload
 CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
 ```
 
-8. **Build and Run the Docker Container**:
-   - Build the Docker image:
-```sh
-docker build -t fastapi .
-```
-
-9. **Analyzing the use of Volume**
-
-- Run the Docker container without the volume mounting
-
-```powershell
-docker run -d -p 8000:8000 fastapi
-```
-
-   - Run the Docker container with volume mounting:
-
-
-```powershell
-docker run -d -p 8000:8000 -v ${PWD}:/code fastapi
-```
-
-
-### Access the Application
-
-Open your web browser and go to `http://localhost:8000`. Any changes you make to `main.py` in the `src` directory will be automatically reflected in the running container.
 
 ## Automate Docker creation using YML
 
@@ -109,11 +91,17 @@ services:
   app:
     build: .
     container_name: python-cont
-    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
     ports:
-      - 8000:8000
+      - 80:80
     volumes:
       - .:/code
+
+  redis:
+    image: "redis:latest"
+    container_name: redis-cont
+    ports:
+    - "6379:6379"
 ```
 
 Run `docker compose`
@@ -121,3 +109,8 @@ Run `docker compose`
 ```sh
  docker compose up --build -d
  ```
+
+
+### Access the Application
+
+Open your web browser and go to `http://localhost:80`. Any changes you make to `main.py` in the `src` directory will be automatically reflected in the running container.
