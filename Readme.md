@@ -23,7 +23,7 @@ Before you begin, ensure you have the following installed on your system:
 - **[[WSL]](Installations/WSL.md)**: Follow the installation procedure. 
 - **[[Docker Desktop]](Installations/DockerDesktop.md)**: Follow the installation procedure. 
 - **[[VSCode]](Installations/VScode.md)**: Follow the installation procedure.
--  **[[GIt]](Installations/Git.md)**: Follow the installation procedure.
+-  **[[Git]](Installations/Git.md)**: Follow the installation procedure.
 
 ### Steps to Get Started
 
