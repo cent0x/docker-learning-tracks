@@ -22,7 +22,7 @@ Before you begin, ensure you have the following installed on your system:
 
 - **[[WSL]](Installations/WSL.md)**
 - **[[Docker Desktop]](Installations/DockerDesktop.md)**
-- **[[VSCode]](Installations/VScode.md)**
+- **[[VSCode]](Installations/VSCode.md)**
 - **[[Git]](Installations/Git.md)**
 - **[[Obsidian]](Installations/Obsidian.md)**
 
