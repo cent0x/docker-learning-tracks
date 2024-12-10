@@ -1,4 +1,3 @@
-Sure! Here's how you can set up your project directory in VSCode with `main.py` inside a `src` directory:
 
 ### Step-by-Step Guide
 
