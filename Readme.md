@@ -44,17 +44,6 @@ Before you begin, ensure you have the following installed on your system:
     - Follow the instructions in each track's README to set up and run the Docker containers.
     - Experiment with the code and try out different configurations to deepen your understanding.
 
-## Contributing
-
-We welcome contributions! If you have a track or exercise that you think would be valuable for others, feel free to submit a pull request. Please ensure that your contributions adhere to the repository's guidelines.
-
-## Support
-
-If you have any questions or need help, feel free to open an issue or reach out to the community. We're here to help each other learn and grow.
-
-## Visit My GitHub
-
-Check out my other projects and repositories on GitHub. You'll find a variety of resources and tools that might be useful for your development journey.
 
 Happy Dockerizing! 🐳
 
